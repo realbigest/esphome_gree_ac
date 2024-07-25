@@ -744,7 +744,7 @@ std::string SinclairACCNT::determine_fan_mode()
     }
     else 
     {
-        ESP_LOGW(TAG, "Received unknown fan mode");
+        ESP_LOGW(TAG, printf("Received unknown fan mode: %i-%i-%i-%i", fanSpeed1, fanSpeed2, fanQuiet, fanTurbo));        
         return fan_modes::FAN_AUTO;
     }
 }
